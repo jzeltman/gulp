@@ -1,0 +1,78 @@
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#todo-list {
+    list-style: none;
+    border: 1px solid #999;
+    padding: 10px 0;
+    overflow: auto;
+
+
+    li {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
+        label {
+            border-left: 1px dotted #099;
+            padding: 10px;
+            font: normal 18px/38px Helvetica, Arial, sans-serif;
+        }
+
+        input[type=text] { 
+            display: none; 
+            margin: 0;
+            padding: 0 9px;
+            border: 1px solid #999;
+            width: calc(100% - 59px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            font: normal 18px/36px Helvetica, Arial, sans-serif;
+            box-shadow: inset 0 0 5px rgba( 0,0,0,.2 );
+        }
+
+        input[type=checkbox] { 
+            float: left;
+            display: block;
+            margin: 13px;
+        }
+
+        button {
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+            float: right;
+            margin: 7px;
+            font: normal 14px/22px Helvetica, Arial, sans-serif;
+            border: none;
+            padding: 0 5px;
+
+            &.delete { background: red; color: white; }
+            &.update { 
+                display: none; 
+                background: green; 
+                color: white; 
+            }
+        }
+
+        &.editing {
+            label { display: none; }
+
+            input[type=text] {
+                display: block;
+            }
+
+            button {
+                &.edit { display: none; }
+                &.update { display: inline-block; }
+            }
+        }
+    }
+}

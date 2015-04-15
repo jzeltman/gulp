@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+
+<div id="app"></div>
+
+<script type="application/json" 
+        data-component="test"
+        data-component-instance="1" 
+        data-component-config>
+    {
+        "endpoints" : {
+            "POST"   : "/path/to/create",
+            "GET"    : "/path/to/read",
+            "PUT"    : "/path/to/update",
+            "DELETE" : "/path/to/delete"
+        },
+        "option1" : "foo",
+        "option2" : "bar",
+        "option3" : "baz"
+    }
+</script>
+
+<script type="application/json" data-component="test" data-component-instance="1">
+    {
+        "id" : "123457890",
+        "name" : "test component"
+    }
+</script>
+
+<script type="application/json" data-component="test" data-component-instance="1">
+    {
+        "id" : "123457890",
+        "name" : "test component"
+    }
+</script>
+
+
+<script type="application/json" data-component="test" data-component-instance="1">
+    {
+        "id" : "123457890",
+        "name" : "test component"
+    }
+</script>
+
+
+<script type="application/json" data-component="test" data-component-instance="2">
+    {
+        "id" : "123457890",
+        "name" : "test component"
+    }
+</script>
+
+
+
+<script type="application/json" data-component="happy" data-component-instance="1">
+    {
+        "id" : "09654321235468",
+        "name" : "birthday"
+    }
+</script>
+
+<script src="dist/main.js"></script>
+</body>
+</html>
